@@ -22,6 +22,7 @@ grow_vertical = 2
 script = ExtResource("1_cnsm1")
 backgroundPickerBtn = NodePath("SelectorSidebar/bgPanel/bgColour")
 pf = NodePath("Profile")
+indexScene = "res://scenes/index/index.tscn"
 
 [node name="SelectorSidebar" type="VBoxContainer" parent="."]
 layout_mode = 0
@@ -218,3 +219,4 @@ texture = ExtResource("11_63gqo")
 [connection signal="pressed" from="SelectorSidebar/bgPanel4/mediaRounding" to="." method="_on_media_rounding_pressed"]
 [connection signal="pressed" from="SelectorSidebar/Save" to="." method="_on_save_pressed"]
 [connection signal="pressed" from="SelectorSidebar/Folder" to="." method="_on_folder_pressed"]
+[connection signal="pressed" from="SelectorSidebar/Exit" to="." method="_on_exit_pressed"]

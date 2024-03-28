@@ -6,6 +6,8 @@ var backgroundPresets = ["52446a","af3b3b","446a4b","1d1e36"]
 
 @export var pf : Node2D
 
+@export_file("*.tscn") var indexScene
+
 var pfpRounding = 0
 var bannerRounding = 25
 var mediaRounding = 0
@@ -69,3 +71,7 @@ func _on_save_pressed():
 	f = FileAccess.open("user://archive/style.css", FileAccess.WRITE)
 	f.store_string(css)
 	f.close()
+
+
+func _on_exit_pressed():
+	get_tree().change_scene_to_file(indexScene)

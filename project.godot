@@ -24,4 +24,5 @@ Global="*res://global.gd"
 
 [rendering]
 
+renderer/rendering_method="gl_compatibility"
 environment/defaults/default_clear_color=Color(0.321569, 0.266667, 0.415686, 1)
