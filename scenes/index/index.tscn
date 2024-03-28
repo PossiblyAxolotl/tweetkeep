@@ -1,0 +1,102 @@
+[gd_scene load_steps=2 format=3 uid="uid://o43debmdsuq8"]
+
+[ext_resource type="Script" path="res://scenes/index/index.gd" id="1_fvmf1"]
+
+[node name="Main" type="Control" node_paths=PackedStringArray("fileDialog", "errorText", "continueButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fvmf1")
+fileDialog = NodePath("FileDialog")
+errorText = NodePath("Error")
+continueButton = NodePath("HBoxContainer/ContinueButton")
+processorScene = "res://scenes/processor/processor.tscn"
+cssScene = "res://scenes/designer/designer.tscn"
+
+[node name="GetArchive" type="LinkButton" parent="."]
+layout_mode = 2
+offset_left = 2.0
+offset_top = 625.0
+offset_right = 290.0
+offset_bottom = 648.0
+text = "Don't have an archive yet? Click here."
+underline = 1
+uri = "https://twitter.com/settings/download_your_data"
+
+[node name="css" type="LinkButton" parent="."]
+layout_mode = 2
+offset_left = 1027.0
+offset_top = 625.0
+offset_right = 1152.0
+offset_bottom = 648.0
+text = "Go to CSS editor"
+underline = 1
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 2
+offset_top = 227.0
+offset_right = 1152.0
+offset_bottom = 250.0
+text = "TweetKeep"
+horizontal_alignment = 1
+
+[node name="Explanation" type="Label" parent="."]
+layout_mode = 2
+offset_top = 258.0
+offset_right = 1152.0
+offset_bottom = 307.0
+text = "Select your tweet archive folder.
+Depending on the amount of media you've posted it may take a minute to copy everything."
+horizontal_alignment = 1
+
+[node name="OpenFolderButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 474.0
+offset_top = 317.0
+offset_right = 678.0
+offset_bottom = 348.0
+text = "Select Folder"
+
+[node name="Error" type="RichTextLabel" parent="."]
+layout_mode = 2
+offset_top = 389.0
+offset_right = 1152.0
+offset_bottom = 412.0
+bbcode_enabled = true
+text = "[center][color=red]No folder selected[/color][/center]"
+fit_content = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_top = 352.0
+offset_right = 1152.0
+offset_bottom = 383.0
+alignment = 1
+
+[node name="ExitButton" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Exit"
+
+[node name="ContinueButton" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+disabled = true
+text = "Continue"
+
+[node name="FileDialog" type="FileDialog" parent="."]
+title = "Open a Directory"
+size = Vector2i(392, 159)
+ok_button_text = "Select Current Folder"
+file_mode = 2
+access = 2
+use_native_dialog = true
+
+[connection signal="pressed" from="css" to="." method="_on_get_archive_2_pressed"]
+[connection signal="pressed" from="OpenFolderButton" to="." method="_on_open_folder_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="dir_selected" from="FileDialog" to="." method="_on_file_dialog_dir_selected"]
