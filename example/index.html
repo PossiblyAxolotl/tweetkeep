@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PossiblyAxolotl's Tweet Archive</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+    <script src="loadposts.js" defer></script>
+</head>
+<body >
+    <div class="container">
+        <div class="head">
+            <img src="profile/banner.png" class="banner">
+            <div class="pfpbox">
+                <img src="profile/profile.png" id="header-pfp">
+                <div class="userinfo">
+                    <h1 id="header-username">Example Profile</h1>
+                    <p id="header-bio">Wow, look at this! I'm a test profile, hello, hi.</p>
+                    <a id="header-link" href="/">https://tweetkeep.possiblyaxolotl.com</a>
+                </div>
+            </div>
+
+            <button onclick="window.location.href = '?mode=posts'" id="postbutton">Posts</button>
+            <button onclick="window.location.href = '?mode=all'" id="allbutton">All</button>
+            <button onclick="window.location.href = '?mode=replies'" id="repliesbutton">Replies</button>
+        </div>
+
+        <div id="post-container"></div>
+
+        <hr>
+        
+        <h2 id="loadtext">Loading posts...</h2>
+        <p>Created with <a href="https://tweetkeep.possiblyaxolotl.com">TweetKeep</a> by <a href="https://www.possiblyaxolotl.com">PossiblyAxolotl</a></p>
+    </div>
+
+    <h6>Created with <a href="https://tweetkeep.possiblyaxolotl.com">TweetKeep</a> by <a href="https://www.possiblyaxolotl.com">PossiblyAxolotl</a></h6>
+</body>
+</html>

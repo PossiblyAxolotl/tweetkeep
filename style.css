@@ -1,0 +1,66 @@
+body {
+    background-color: #af3b3b;
+    padding: 0;
+    margin: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6, a, button, sub, summary, details {
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background-color: rgba(0,0,0,0.25);
+    padding: 50px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+.shadow {
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px black;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.bigbutton {
+    background: linear-gradient(#cf6767, #801d1d);
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 25px;
+    border-style: none;
+    font-size: x-large;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.5);
+}
+
+.bigbutton:hover {
+    background: linear-gradient(#550e0e, #9c4545);
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.bigbutton:active {
+    transform: translate(0px, 4px) scale(100%, 90%);
+    box-shadow: 0px 0px 12px rgba(0,0,0,0.5);
+
+}
+
+ol {
+    list-style-position: inside;
+}
+
+li {
+    margin-bottom: 4px;
+}
+
+@media only screen and (max-width:800px) {
+    .container {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,122 @@
+body {
+    background-color: #af3b3b;
+    padding: 0;
+    margin: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6, a, button, sub {
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background-color: rgba(0,0,0,0.25);
+    padding: 10px;
+}
+
+.banner {
+    max-width: 100%;
+    border-radius: 25px;
+}
+
+#header-pfp {
+    border-radius: 25px;
+    display: inline;
+    max-width: 150px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+    margin-right: 10px;
+}
+
+#header-bio {
+    margin-top: 0;
+}
+
+#header-username {
+    margin-bottom:0;
+}
+
+.pfpbox {
+    display: flex;
+    margin-top: 5px;
+}
+
+a {
+    color:lightgray;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border-color: #af3b3b;
+    border-style: solid;
+}
+
+@media only screen and (max-width:800px) {
+    .pfpbox {
+        display: block;
+    }
+
+    #header-username {
+        margin-top:5px;
+    }
+
+    #header-pfp {
+        max-width: 100px;
+        max-height: 100px; 
+    }
+
+}
+
+button {
+    width: 32%;
+    height: 30px;
+    margin: auto;
+    margin-top: 10px;
+
+    background: transparent;
+    border: none;
+    border-radius: 25px;
+}
+
+button:hover {
+    background-color: rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+button:disabled {
+    text-decoration: underline;
+    background-color: rgba(0,0,0,0.1);
+}
+
+h6 {
+    position: fixed;
+    bottom:10px;
+    left:10px;
+    margin: 0;
+}
+
+@media only screen and (max-width:1460px) {
+    h6 {
+        display: none;
+    }
+}
+
+.mediabox {
+    max-height: 300px;
+    overflow-y: hidden;
+    display: flex;
+}
+
+.mediabox img, .mediabox video {
+    max-height: 300px;
+    margin-left:3px;
+    margin-right:3px;
+    border-radius: 0px;
+}
